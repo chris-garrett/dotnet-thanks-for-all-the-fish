@@ -11,7 +11,7 @@ public interface IGrpcMessageHandlerFactory
 }
 
 [TestFixture]
-public class IntegrationTestFixture<TClient> : IGrpcMessageHandlerFactory
+public abstract class IntegrationTestFixture<TClient> : IGrpcMessageHandlerFactory
     where TClient : ClientBase<TClient>
 {
     private readonly WebApplicationFactory<Program> _factory;

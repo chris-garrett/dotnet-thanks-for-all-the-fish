@@ -16,6 +16,7 @@ service Greeter {
 message HelloRequest {
   string first = 1;
   optional string last = 2;
+  optional int32 age = 3;
 }
 
 // The response message containing the greetings.

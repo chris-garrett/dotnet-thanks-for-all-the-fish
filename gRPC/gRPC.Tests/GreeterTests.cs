@@ -38,6 +38,18 @@ public class GreeterTests : IntegrationTestFixture<Greeter.GreeterClient>
                 Message = "Hello Chris Garrett"
             }
         ),        
+        new (
+            new HelloRequest()
+            {
+                First = "Chris",
+                Last = "Garrett",
+                Age = 42
+            },
+            new HelloReply()
+            {
+                Message = "Hello Chris Garrett and you're 42 years old"
+            }
+        ),          
     };
 
 }

@@ -15,9 +15,15 @@ public class GreeterService : Greeter.GreeterBase
     {
         StringBuilder sb = new StringBuilder();
         sb.Append($"Hello {request.First}");
+        
         if (request.HasLast)
         {
             sb.Append($" {request.Last}");
+        }
+
+        if (request.HasAge)
+        {
+            sb.Append($" and you're {request.Age} years old");
         }
         
         return Task.FromResult(new HelloReply
